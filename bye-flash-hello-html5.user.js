@@ -11,6 +11,7 @@
 // @include     *://*.open.163.com/movie*
 // @include     *://*.study.163.com/course/*
 // @include     *://live.bilibili.com/*
+// @include     *://v.qq.com/*
 // @run-at      document-start
 // @version     1.6.2
 // @grant       none
