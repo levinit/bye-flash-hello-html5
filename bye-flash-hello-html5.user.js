@@ -5,7 +5,6 @@
 // @description 某些网站啊，明明有html5视频播放，就是不提供给你用呢，mac就可以是几个意思？对，说的就是你！flash?手动再见!支持优酷-乐视-爱奇艺等
 // @include     *://*.le.com/*
 // @include     *://*.iqiyi.com/*html*
-// @include     *://*.youku.com/*
 // @include     *://*.cctv.com/*
 // @include     *://*.mgtv.com/*
 // @include     *://*.icourse163.org/*
@@ -50,13 +49,7 @@ var changeUA = function (ua) { //更改ua的方法
         }
     }
 })();
-if (location.host.indexOf('youku') >= 0) { //优酷youku
-    //   (function () {
-    //     window.sessionStorage.setItem('P_l_h5', true);
-    //   }) ();
-    ua = 'iPad';
-    changeUA(ua);
-} else if (isPhone) { //isPhone为true时 使用移动ua 默认用android
+if (isPhone) { //isPhone为true时 使用移动ua 默认用android
     ua = 'Mozilla/5.0 (Linux; U; Android 4.0.4; GT-I9300 Build/IMM76D) AppleWebKit/601.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/601.1.46';
     changeUA(ua);
 } else { //使用chrome、mac、safari等ua
