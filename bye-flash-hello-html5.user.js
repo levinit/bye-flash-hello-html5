@@ -5,15 +5,17 @@
 // @description 某些网站啊，明明有html5视频播放，就是不提供给你用呢，mac就可以是几个意思？对，说的就是你！flash?手动再见!支持优酷-乐视-爱奇艺等
 // @include     *://*.le.com/*
 // @include     *://*.iqiyi.com/*html*
+// @include     *://*.youku.com/*
 // @include     *://*.cctv.com/*
 // @include     *://*.mgtv.com/*
 // @include     *://v.qq.com/*
 // @include     *://*.icourse163.org/*
 // @include     *://*.open.163.com/movie*
-// @include     *://*.study.163.com/course/*
+// @include     *://study.163.com/course/courseLearn*
+// @include     *://mooc.study.163.com/learn/*
 // @include     *://live.bilibili.com/*
 // @run-at      document-start
-// @version     1.6.2
+// @version     1.6.4
 // @grant       none
 // ==/UserScript==
 //'use strict';
@@ -53,7 +55,7 @@ var changeUA = function (ua) { //更改ua的方法
 if (location.host.indexOf('youku') >= 0) { //优酷youku 
     (function () {
         window.sessionStorage.setItem('P_l_h5', true); 
-    }) (); 
+    })(); 
 } else if (isPhone) { //isPhone为true时 使用移动ua 默认用android
     ua = 'Mozilla/5.0 (Linux; U; Android 4.0.4; GT-I9300 Build/IMM76D) AppleWebKit/601.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/601.1.46';
     changeUA(ua);
@@ -65,10 +67,19 @@ if (location.host.indexOf('youku') >= 0) { //优酷youku
     }
     changeUA(ua);
 }
+if (location.href.search('open.163') >= 0) {//网易公开课
+    setTimeout(function () {
+        var v = ele('.video-wrapper video');
+        ele('body').style.backgroundColor = '#e4f0eb';
+        if (!!v === true) {//设置视频播放区域的高度
+            v.setAttribute('style', 'height:100%');
+        }
+    }, 2333);
+}
+
 window.onload = function () {
-    //显示控制条-网易云课堂和爱奇艺
     if (location.href.search('study.163') >= 0 || location.href.search('iqiyi.com') >= 0) {
-        var videoElement = document.querySelector('video'); //视频元素
+        var videoElement = ele('video'); //视频元素
         if (!!videoElement === true) {
             videoElement.setAttribute('controls', 'controls'); //显示播放控制条
             if (location.href.search('iqiyi.com') >= 0) {
