@@ -15,7 +15,7 @@
 // @include     *://mooc.study.163.com/learn/*
 // @include     *://live.bilibili.com/*
 // @run-at      document-start
-// @version     1.6.4
+// @version     1.6.4.1
 // @grant       none
 // ==/UserScript==
 //'use strict';
@@ -42,8 +42,7 @@ var changeUA = function (ua) { //更改ua的方法
         var phone = [
             'cctv',
             '.163',
-            'mgtv',
-            'iqiyi'
+            'mgtv'
         ]; //这些网站用移动ua
         for (var i = 0; i < phone.length; i++) {
             if (location.host.indexOf(phone[i]) >= 0) {
@@ -78,25 +77,10 @@ if (location.href.search('open.163') >= 0) {//网易公开课
 }
 
 window.onload = function () {
-    if (location.href.search('study.163') >= 0 || location.href.search('iqiyi.com') >= 0) {
+    if (location.href.search('study.163') >= 0) {
         var videoElement = ele('video'); //视频元素
         if (!!videoElement === true) {
             videoElement.setAttribute('controls', 'controls'); //显示播放控制条
-            if (location.href.search('iqiyi.com') >= 0) {
-                iqiyi(); //对爱奇艺的一些操作
-            }
-        }
-    }
-    function iqiyi() {
-        var dom = {
-            defaultProcess: ele('.process-response'), //爱奇艺默认的进度条
-            control2: ele('.bottom') //播放下一个视频和调整画质的控制条
-        };
-        if (!!dom.control2 === true) { //播放下一个视频和调整画质的控制条往上放
-            dom.control2.style.bottom = '25px'; //别被video的controls遮住了
-            if (!!dom.defaultProcess === true) { //爱奇艺默认的进度条很烦人
-                dom.defaultProcess.style.display = 'none'; //消失吧 进度条
-            }
         }
     }
 };
