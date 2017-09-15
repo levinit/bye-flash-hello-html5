@@ -10,7 +10,7 @@
 // @include     *://*.mgtv.com/*
 // @include     *://v.qq.com/*
 // @include     *://*.icourse163.org/*
-// @include     *://*.open.163.com/movie*
+// @include     *://open.163.com/movie*
 // @include     *://study.163.com/course/courseLearn*
 // @include     *://mooc.study.163.com/learn/*
 // @include     *://live.bilibili.com/*
