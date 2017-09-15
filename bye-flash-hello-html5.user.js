@@ -61,9 +61,9 @@ if (location.host.indexOf('youku') >= 0) { //优酷youku
     changeUA(ua);
 } else { //使用chrome、mac、safari等ua
     if (location.host.indexOf('le.com') >= 0) { //le.com乐视网对mac+safari情有独钟
-        ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.7 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.7';
+        ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8';
     } else { //使用mac ua
-        ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.7 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/601.2.7';
+        ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Chrome/61.0.3163.91 Safari/603.3.8';
     }
     changeUA(ua);
 }
