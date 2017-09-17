@@ -34,10 +34,16 @@ bye-flash-hello-html5 | 再见flash 你好html5
 
 - [腾讯视频](https://v.qq.com)-Mac
 
+<<<<<<< HEAD
   腾讯自带HTML5播放，经实验，有时候不太顺畅，换Mac会好很多。
 
   ​
+=======
+  腾讯自带HTML5播放，经实验，有时候不太顺畅，换Mac会好很多。  
 
+>>>>>>> 3f41e66f40c0ab4c5c525a3d297e43de0b4ee9f7
+
+  
   m表示使用了移动端UA
   Mac、Safari、chrome  表示使用了该设备/浏览器UA
 

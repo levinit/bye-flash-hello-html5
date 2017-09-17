@@ -1,9 +1,10 @@
-﻿// ==UserScript==
+// ==UserScript==
 // @name        bye-flash-hello-html5 | 再见flash 你好html5
 // @namespace   https://greasyfork.org/en/users/131965-levinit
 // @author      levinit
 // @description 某些网站啊，明明有html5视频播放，就是不提供给你用呢，mac就可以是几个意思？对，说的就是你！flash?手动再见!支持优酷-乐视-爱奇艺等
 // @include     *://*.le.com/*
+<<<<<<< HEAD:bye-flash-hello-html5.js
 // @include     *://*iqiyi.com/*html*
 // @include     *://*youku.com/*
 // @include     *://*cctv.com/*
@@ -15,6 +16,20 @@
 // @include     *://mooc.study.163.com/learn/*
 // @run-at      document-start
 // @version     1.6.4
+=======
+// @include     *://*.iqiyi.com/*html*
+// @include     *://*.youku.com/*
+// @include     *://*.cctv.com/*
+// @include     *://*.mgtv.com/*
+// @include     *://v.qq.com/*
+// @include     *://*.icourse163.org/*
+// @include     *://open.163.com/movie*
+// @include     *://study.163.com/course/courseLearn*
+// @include     *://mooc.study.163.com/learn/*
+// @include     *://live.bilibili.com/*
+// @run-at      document-start
+// @version     1.6.4.1
+>>>>>>> 3f41e66f40c0ab4c5c525a3d297e43de0b4ee9f7:bye-flash-hello-html5.user.js
 // @grant       none
 // ==/UserScript==
 //'use strict';
@@ -41,8 +56,7 @@ var changeUA = function (ua) { //更改ua的方法
         var phone = [
             'cctv',
             '.163',
-            'mgtv',
-            'iqiyi'
+            'mgtv'
         ]; //这些网站用移动ua
         for (var i = 0; i < phone.length; i++) {
             if (location.host.indexOf(phone[i]) >= 0) {
@@ -51,18 +65,25 @@ var changeUA = function (ua) { //更改ua的方法
         }
     }
 })();
+<<<<<<< HEAD:bye-flash-hello-html5.js
 if (location.host.indexOf('youku') >= 0) { //优酷youku
     (function () {
         window.sessionStorage.setItem('P_l_h5', true);
     })();
+=======
+if (location.host.indexOf('youku') >= 0) { //优酷youku 
+    (function () {
+        window.sessionStorage.setItem('P_l_h5', true); 
+    })(); 
+>>>>>>> 3f41e66f40c0ab4c5c525a3d297e43de0b4ee9f7:bye-flash-hello-html5.user.js
 } else if (isPhone) { //isPhone为true时 使用移动ua 默认用android
     ua = 'Mozilla/5.0 (Linux; U; Android 4.0.4; GT-I9300 Build/IMM76D) AppleWebKit/601.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/601.1.46';
     changeUA(ua);
 } else { //使用chrome、mac、safari等ua
     if (location.host.indexOf('le.com') >= 0) { //le.com乐视网对mac+safari情有独钟
-        ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.7 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.7';
+        ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8';
     } else { //使用mac ua
-        ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.7 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/601.2.7';
+        ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Chrome/61.0.3163.91 Safari/603.3.8';
     }
     changeUA(ua);
 }
@@ -77,25 +98,14 @@ if (location.href.search('open.163') >= 0) {//网易公开课
 }
 
 window.onload = function () {
+<<<<<<< HEAD:bye-flash-hello-html5.js
     if (location.href.search('study.163') >= 0 || location.href.search('iqiyi.com') >= 0) {
+=======
+    if (location.href.search('study.163') >= 0) {
+>>>>>>> 3f41e66f40c0ab4c5c525a3d297e43de0b4ee9f7:bye-flash-hello-html5.user.js
         var videoElement = ele('video'); //视频元素
         if (!!videoElement === true) {
             videoElement.setAttribute('controls', 'controls'); //显示播放控制条
-            if (location.href.search('iqiyi.com') >= 0) {
-                iqiyi(); //对爱奇艺的一些操作
-            }
-        }
-    }
-    function iqiyi() {
-        var dom = {
-            defaultProcess: ele('.process-response'), //爱奇艺默认的进度条
-            control2: ele('.bottom') //播放下一个视频和调整画质的控制条
-        };
-        if (!!dom.control2 === true) { //播放下一个视频和调整画质的控制条往上放
-            dom.control2.style.bottom = '25px'; //别被video的controls遮住了
-            if (!!dom.defaultProcess === true) { //爱奇艺默认的进度条很烦人
-                dom.defaultProcess.style.display = 'none'; //消失吧 进度条
-            }
         }
     }
 };
