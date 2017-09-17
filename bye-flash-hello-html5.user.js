@@ -77,7 +77,6 @@ if (location.href.search('open.163') >= 0) {//网易公开课
 }
 
 window.onload = function () {
-    if (location.href.search('study.163') >= 0) {
         var videoElement = ele('video'); //视频元素
         if (!!videoElement === true) {
             videoElement.setAttribute('controls', 'controls'); //显示播放控制条
