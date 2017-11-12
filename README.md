@@ -46,14 +46,14 @@ bye-flash-hello-html5 | 再见flash 你好html5
 
   提示：Chrome52+可以直接使用HTML5播放。
 
-  ​
+- [搜狐视频](https://tv.sohu.com/)
 
 # 使用
 1. 根据你的浏览器情况安装[脚本管理器](https://greasyfork.org/zh-CN)
 
    注意：**Firefox用户暂时不要使用greasymonkey扩展**，建议使用[Tampermonkey](https://tampermonkey.net/)，油猴新版本插件大有问题，许多脚本都会失效（2017.11留）。
 
-2. 安装此脚本，一下两种方式任选其一：
+2. 安装此脚本，以下两种方式任选其一：
    - 查看[bye-flash-hello-html5.user.js](https://github.com/levinit/bye-flash-hello-html5/blob/master/bye-flash-hello-html5.user.js) ，然后点击[Raw](https://github.com/levinit/bye-flash-hello-html5/raw/master/bye-flash-hello-html5.user.js)按钮；
    - 到Greasy Fork网站的[bye-flash-hello-html5 | 再见flash 你好html5](https://greasyfork.org/zh-CN/scripts/30879-bye-flash-hello-html5-%E5%86%8D%E8%A7%81flash-%E4%BD%A0%E5%A5%BDhtml5) 信息页，点击[安装脚本](https://greasyfork.org/scripts/30879-bye-flash-hello-html5-%E5%86%8D%E8%A7%81flash-%E4%BD%A0%E5%A5%BDhtml5/code/bye-flash-hello-html5%20%7C%20%E5%86%8D%E8%A7%81flash%20%E4%BD%A0%E5%A5%BDhtml5.user.js)按钮。
 
