@@ -9,12 +9,6 @@
 // @include     *://y.qq.com/*
 // @include     *://tv.cctv.com/*
 // @include     *://*.cntv.cn/video/*
-// @include     *://www.mgtv.com/*/*.html*
-// @include     *://m.mgtv.com/*
-// @include     *://zt.mgtv.com/act/*
-// @include     *://www.mgtv.com/news
-// @include     *://www.mgtv.com/live
-// @include     *://live.mgtv.com*
 // @include     *://*.icourse163.org/*
 // @include     *://open.163.com/movie*
 // @include     *://m.open.163.com/movie*
@@ -27,8 +21,8 @@
 // @grant       none
 // ==/UserScript==
 //'use strict';
-let ua = null; //user-agent
-let isMobile = false; //是否使用移动ua
+var ua = null; //user-agent
+var isMobile = false; //是否使用移动ua
 //获取元素对象的函数
 function ele(element) {
   return document.querySelector(element);
@@ -45,7 +39,7 @@ function changeUA(ua) {
 //判断移动ua相关信息
 (function() {
   //这些网站使用移动ua
-  const names = ["cctv", ".163", "mgtv", "iqiyi", "cntv", "sohu"];
+  var names = ["cctv", ".163", "iqiyi", "cntv", "sohu"];
 
   if (
     location.host.indexOf("iqiyi") >= 0 &&
@@ -53,7 +47,7 @@ function changeUA(ua) {
   ) {
     console.log("路过"); //爱奇艺的html5不支持firefox（非firefox酱油路过）
   } else {
-    for (let i = 0; i < names.length; i++) {
+    for (var i = 0; i < names.length; i++) {
       if (location.host.indexOf(names[i]) >= 0) {
         isMobile = true;
       }
@@ -62,16 +56,11 @@ function changeUA(ua) {
 })();
 
 if (isMobile) {
-  //移动ua的网站
-  if (location.host.indexOf("mgtv") >= 0) {
-    //iPad2 ua
-    ua =
-      "Mozilla/5.0 (iPad; U; CPU OS 4_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8F191 Safari/6533.18.5";
-  } else {
-    //Android7 ua
-    ua =
-      "Mozilla/5.0 (Linux; Android 7.0; PLUS Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36";
-  }
+  //ipad2
+  //ua ="Mozilla/5.0 (iPad; U; CPU OS 4_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8F191 Safari/6533.18.5";
+ 
+  //Android7 ua
+  ua ="Mozilla/5.0 (Linux; Android 7.0; PLUS Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36";
   changeUA(ua);
 } else {
   //使用chrome、mac、safari等ua
@@ -90,7 +79,6 @@ if (isMobile) {
       "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8";
     changeUA(ua);
   } else {
-    //其余诸位通通进入披上这顶伪装衣
     ua =
       "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Chrome/61.0.3163.91 Safari/603.3.8";
     changeUA(ua);
@@ -100,7 +88,7 @@ if (isMobile) {
 //网易公开课设置视频播放区域的高度
 if (location.href.search("open.163") >= 0) {
   setTimeout(function() {
-    const v = ele(".video-wrapper video");
+    var v = ele(".video-wrapper video");
     ele("body").style.backgroundColor = "#e4f0eb";
     if (v) {
       v.setAttribute("style", "height:100%");
@@ -115,7 +103,7 @@ window.onload = function() {
     (location.href.search("study.163") >= 0 ||
       location.href.search("iqiyi.com") >= 0)
   ) {
-    const videoElement = ele("video");
+    var videoElement = ele("video");
     if (videoElement) {
       videoElement.setAttribute("controls", "controls");
       if (location.href.search("iqiyi.com") >= 0) {
@@ -125,8 +113,8 @@ window.onload = function() {
   }
   //爱奇艺的相关调整
   function iqiyi() {
-    const defaultProcess = ele(".process-response"); //爱奇艺默认的进度条
-    const control2 = ele(".bottom"); //播放下一个视频和调整画质的控制条
+    var defaultProcess = ele(".process-response"); //爱奇艺默认的进度条
+    var control2 = ele(".bottom"); //播放下一个视频和调整画质的控制条
     if (control2) {
       control2.style.bottom = "25px"; //播放下一个视频和调整画质的控制条往上放
       if (defaultProcess) {
