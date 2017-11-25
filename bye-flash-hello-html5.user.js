@@ -15,7 +15,6 @@
 // @include     *://study.163.com/course/courseLearn*
 // @include     *://mooc.study.163.com/learn/*
 // @include     *://*.sohu.com/*html*
-// @include     *://live.bilibili.com/*
 // @run-at      document-start
 // @version     1.7.5
 // @grant       none
@@ -66,8 +65,7 @@ if (isMobile) {
   //使用chrome、mac、safari等ua
   if (
     (location.host === "v.qq.com" ||
-      location.host === "y.qq.com" ||
-      location.host === "live.bilibil.com") &&
+      location.host === "y.qq.com") &&
     navigator.userAgent.indexOf("Edge") === -1
   ) {
     console.log("路过"); //Edge的腾讯视频、QQ音乐MV和b站直播不支持html5（不是Edge就打酱油路过吧）
@@ -76,12 +74,12 @@ if (isMobile) {
   } else if (location.host.indexOf("le.com") >= 0) {
     //尊贵的le.com对mac+safari情有独钟……单独提出来吧
     ua =
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8";
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38";
     changeUA(ua);
   } else {
     //其余诸位通通进入披上这顶伪装衣
     ua =
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Chrome/61.0.3163.91 Safari/603.3.8";
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/603.3.8 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/604.1.38";
     changeUA(ua);
   }
 }
