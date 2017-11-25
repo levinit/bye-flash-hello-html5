@@ -74,12 +74,12 @@ if (isMobile) {
   } else if (location.host.indexOf("le.com") >= 0) {
     //尊贵的le.com对mac+safari情有独钟……单独提出来吧
     ua =
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38";
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/604.3.5 (KHTML, like Gecko) Version/11.0 Safari/604.3.5";
     changeUA(ua);
   } else {
     //其余诸位通通进入披上这顶伪装衣
     ua =
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/603.3.8 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/604.1.38";
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.3.5 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/604.3.5";
     changeUA(ua);
   }
 }
