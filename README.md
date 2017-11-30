@@ -46,25 +46,24 @@ bye-flash-hello-html5 | 再见flash 你好html5
 
 - [搜狐视频](https://tv.sohu.com/)
 
+- [Acfun](http://acfun.cn)
+
 ---
 
-遇到“视频格式或者MIME不支持”是无能为力的，这与解码器相关，了解相关信息请问搜索引擎。
+其他提示：
 
-# 使用
+- 遇到“视频格式或者MIME不支持”是无能为力的，这与解码器相关，了解相关信息请问搜索引擎。
+- 某些广告拦截插件可能会误伤脚本，遇到不能播放时请不要忘记着一种可能形，暂时关闭或者对该视频页面关闭广告屏蔽。
+
+# 安装
 
 1. 根据你的浏览器情况安装[脚本管理器](https://greasyfork.org/zh-CN)
 
-   注意：greasymonkey新版不止为何不能良好加载本脚本，请使用[tampermonkey](https://tampermonkey.net/)
+   注意：greasymonkey新版不知为何不能加载本脚本，暂请使用[tampermonkey](https://tampermonkey.net/)代之。
 
 2. 安装此脚本，以下两种方式任选其一：
    - 查看[bye-flash-hello-html5.user.js](https://github.com/levinit/bye-flash-hello-html5/blob/master/bye-flash-hello-html5.user.js) ，然后点击[Raw](https://github.com/levinit/bye-flash-hello-html5/raw/master/bye-flash-hello-html5.user.js)按钮；
    - 到Greasy Fork网站的[bye-flash-hello-html5 | 再见flash 你好html5](https://greasyfork.org/zh-CN/scripts/30879-bye-flash-hello-html5-%E5%86%8D%E8%A7%81flash-%E4%BD%A0%E5%A5%BDhtml5) 信息页，点击[安装脚本](https://greasyfork.org/scripts/30879-bye-flash-hello-html5-%E5%86%8D%E8%A7%81flash-%E4%BD%A0%E5%A5%BDhtml5/code/bye-flash-hello-html5%20%7C%20%E5%86%8D%E8%A7%81flash%20%E4%BD%A0%E5%A5%BDhtml5.user.js)按钮。
-
----
-
-某些代码是借（fu）鉴（zhi）的，比如：
-
-- ~~[优酷原生HTML5播放器](https://greasyfork.org/nl/scripts/30414-%E4%BC%98%E9%85%B7%E5%8E%9F%E7%94%9Fhtml5%E6%92%AD%E6%94%BE%E5%99%A8)　简单有效的一句代码~~
 
 ---
 
