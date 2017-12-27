@@ -16,6 +16,7 @@
 // @include     *://mooc.study.163.com/learn/*
 // @include     *://*.sohu.com/*html*
 // @include     *://*acfun.cn/v/ac*
+// @include      *://*acfun.cn/bangumi/*
 // @include     *://m.acfun.cn/*
 // @run-at      document-start
 // @version     1.7.7
@@ -25,14 +26,15 @@
 
 //=============
 //acfun手机版主页跳转到pc版主页
-if (location.href === 'http://m.acfun.cn/') {
-  location.href = 'http://acfun.cn/'
-}
-
-//acfun手机版频道页跳转到pc版频道页
-if (location.search.indexOf('channel') >= 0) {
-  const num = location.hash.match(/\d+/)[0]
-  location.href = 'http://acfun.cn/v/list' + num + '/index.htm'
+if (location.href.indexOf('m.acfun') >= 0) {
+  //手机版频道页跳转到pc版频道页
+  if (location.hash.indexOf('channel') >= 0) {
+    const num = location.hash.match(/\d+/)[0]
+    location.replace('http://acfun.cn/v/list' + num + '/index.htm')
+  }
+  if (location.href === 'http://m.acfun.cn/') {
+    location.replace('http://acfun.cn/')
+  }
 }
 
 //爱奇艺+非firefox
@@ -58,11 +60,12 @@ let [ua, isMobile] = [null, false] //user-agent 和 是否使用移动ua
 //这些网站使用移动ua
 const sites = ['cctv', '.163', 'iqiyi', 'cntv', 'sohu', 'acfun']
 
-for (let i = 0; i < sites.length; i++) {
-  if (location.host.indexOf(sites[i]) >= 0) {
+sites.forEach(curVal => {
+  if (location.host.indexOf(curVal) >= 0) {
     isMobile = true
+    return false
   }
-}
+})
 
 if (isMobile) {
   //ipad2
@@ -72,7 +75,6 @@ if (isMobile) {
     'Mozilla/5.0 (Linux; U; Android 4.0.4; GT-I9300 Build/IMM76D) AppleWebKit/601.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/601.1.46'
   //Android7
   //ua ='Mozilla/5.0 (Linux; Android 7.0; PLUS Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36'
-  changeUA(ua)
 } else {
   //使用chrome、mac、safari等ua
   if (location.host.indexOf('le.com') >= 0) {
@@ -83,8 +85,9 @@ if (isMobile) {
     ua =
       'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.3.5 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/604.3.5'
   }
-  changeUA(ua)
 }
+
+changeUA(ua)
 
 //网易公开课设置视频播放区域的高度
 if (location.href.indexOf('open.163') >= 0) {

@@ -58,7 +58,7 @@ bye-flash-hello-html5 | 再见flash 你好html5
 
 1. 根据你的浏览器情况安装[脚本管理器](https://greasyfork.org/zh-CN)
 
-   注意：greasymonkey新版不知为何不能加载本脚本，暂请使用[tampermonkey](https://tampermonkey.net/)代之。
+   注意：greasymonkey新版不知为何不能加载本脚本，暂请使用[tampermonkey](https://tampermonkey.net/)代之(2017.12)。
 
 2. 安装此脚本，以下两种方式任选其一：
    - 查看[bye-flash-hello-html5.user.js](https://github.com/levinit/bye-flash-hello-html5/blob/master/bye-flash-hello-html5.user.js) ，然后点击[Raw](https://github.com/levinit/bye-flash-hello-html5/raw/master/bye-flash-hello-html5.user.js)按钮；
