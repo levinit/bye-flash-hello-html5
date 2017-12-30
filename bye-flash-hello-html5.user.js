@@ -19,7 +19,7 @@
 // @include      *://*acfun.cn/bangumi/*
 // @include     *://m.acfun.cn/*
 // @run-at      document-start
-// @version     1.7.7
+// @version     1.7.8
 // @grant       none
 // ==/UserScript==
 //'use strict';
