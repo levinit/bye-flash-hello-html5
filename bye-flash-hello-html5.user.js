@@ -7,7 +7,8 @@
 // @include     *://*.iqiyi.com/*html*
 // @include     *://v.qq.com/*
 // @include     *://y.qq.com/*
-// @include     *://*.cctv.com/*
+// @include     *://tv.cctv.com/*
+// @include     *://wlchunwan.cctv.com/*
 // @include     *://*.cntv.cn/video/*
 // @include     *://*.icourse163.org/*
 // @include     *://open.163.com/movie*
@@ -19,7 +20,7 @@
 // @include      *://*acfun.cn/bangumi/*
 // @include     *://m.acfun.cn/*
 // @run-at      document-start
-// @version     1.7.8
+// @version     1.7.9
 // @grant       none
 // ==/UserScript==
 //'use strict';
