@@ -7,7 +7,7 @@
 // @include     *://*.iqiyi.com/*html*
 // @include     *://v.qq.com/*
 // @include     *://y.qq.com/*
-// @include     *://tv.cctv.com/*
+// @include     *://*.cctv.com/*
 // @include     *://*.cntv.cn/video/*
 // @include     *://*.icourse163.org/*
 // @include     *://open.163.com/movie*
