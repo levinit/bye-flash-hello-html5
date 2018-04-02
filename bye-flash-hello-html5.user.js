@@ -21,7 +21,7 @@
 // @include     *://*acfun.cn/bangumi/*
 // @include     *://m.acfun.cn/*
 // @run-at      document-start
-// @version     1.7.9
+// @version     1.8.0
 // @grant       none
 // ==/UserScript==
 //'use strict';
@@ -127,9 +127,9 @@ function ele(element) {
 }
 //更改ua的函数
 function changeUA(ua) {
-  //腾讯视频和QQ音乐MV+Edge 不切换ua
+  //QQ音乐MV+Edge 不切换ua
   if (
-    (location.host === 'v.qq.com' || location.host === 'y.qq.com') &&
+    (location.host === 'y.qq.com') &&
     navigator.userAgent.indexOf('Edge') >= 0
   ) {
     return false;
