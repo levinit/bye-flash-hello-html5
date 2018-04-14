@@ -17,11 +17,12 @@
 // @include     *://study.163.com/course/courseLearn*
 // @include     *://mooc.study.163.com/learn/*
 // @include     *://*.sohu.com/*html*
+// @include     *://*mgtv.com/*html*
 // @include     *://*acfun.cn/v/ac*
 // @include     *://*acfun.cn/bangumi/*
 // @include     *://m.acfun.cn/*
 // @run-at      document-start
-// @version     1.8.0
+// @version     1.8.1
 // @grant       none
 // ==/UserScript==
 //'use strict';

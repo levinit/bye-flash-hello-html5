@@ -48,6 +48,8 @@ bye-flash-hello-html5 | 再见flash 你好html5
 
 - [Acfun](http://acfun.cn)
 
+- [芒果tv](https://www.mgtv.com/)
+
 ---
 
 其他提示：
