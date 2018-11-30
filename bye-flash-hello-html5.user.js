@@ -12,8 +12,6 @@
 // @include     *://wlchunwan.cctv.com/*
 // @include     *://*.cntv.cn/video/*
 // @include     *://*.icourse163.org/*
-// @include     *://open.163.com/movie*
-// @include     *://m.open.163.com/movie*
 // @include     *://study.163.com/course/courseLearn*
 // @include     *://mooc.study.163.com/learn/*
 // @include     *://*.sohu.com/*html*
@@ -79,17 +77,6 @@ if (isMobile) {
 changeUA(ua);
 
 //=====
-//网易公开课设置视频播放区域的高度
-if (location.href.indexOf('open.163') >= 0) {
-  setTimeout(function() {
-    const v = ele('.video-wrapper video');
-    ele('body').style.backgroundColor = '#e4f0eb';
-    if (v) {
-      v.setAttribute('style', 'height:100%');
-    }
-  }, 2333);
-}
-
 //显示播放控制条 stuyd.163 iqiyi
 window.onload = function() {
   if (

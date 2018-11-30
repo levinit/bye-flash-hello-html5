@@ -22,9 +22,7 @@ bye-flash-hello-html5 | 再见flash 你好html5
 
   提示：使用较新版本的Edge15+、Chrome52+的用户**应该**可以直接使用HTML5播放。
 
-- [央视网](http://cctv.com)（cctv.com和cntv.cn）
-
-- [网易公开课](http://open.163.com)
+- [央视网](http://cctv.com)（cctv.com和cntv.cn，不支持直播）
 
 - [网易云课堂](http://study.163.com)
 
@@ -68,4 +66,4 @@ bye-flash-hello-html5 | 再见flash 你好html5
 
 ---
 
-试看如今的网络，已是html5的世界，用flash，电脑要！爆！炸！好！**吗！**
+试看如今的网络，已是html5的世界，用flash，电脑要！爆！炸！好吗！
