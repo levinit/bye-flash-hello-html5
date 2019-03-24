@@ -8,7 +8,6 @@
 // @include     *://wlchunwan.cctv.com/*
 // @include     *://*.cntv.cn/video/*
 // @include     *://*.icourse163.org/*
-// @include     *://study.163.com/course/courseLearn*
 // @include     *://mooc.study.163.com/learn/*
 // @include     *://*.sohu.com/*html*
 // @include     *://*mgtv.com/*html*
@@ -16,7 +15,7 @@
 // @include     *://*acfun.cn/bangumi/*
 // @include     *://m.acfun.cn/*
 // @run-at      document-start
-// @version     1.8.1
+// @version     1.8.2
 // @grant       none
 // ==/UserScript==
 //'use strict';

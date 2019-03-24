@@ -16,15 +16,17 @@ bye-flash-hello-html5 | 再见flash 你好html5
 
 - ~~[优酷](http://youku.com)~~
 
-  优酷可以直接播放HTML5啦，划！
+  支持HTML5啦
 
-- [爱奇艺](http://iqiyi.com)
+- ~~[爱奇艺](http://iqiyi.com)~~
 
-  提示：使用较新版本的Edge15+、Chrome52+的用户**应该**可以直接使用HTML5播放。
+  提示：使用较新版本的Firefox、Edge15+、Chrome52+的用户**应该**可以直接使用HTML5播放。
 
-- [央视网](http://cctv.com)（cctv.com和cntv.cn，不支持直播）
+- [央视网](http://cctv.com)（cctv.com和cntv.cn，不支持live直播）
 
-- [网易云课堂](http://study.163.com)
+- ~~[网易云课堂](http://study.163.com)~~
+
+  支持HTML5播放啦
 
 - [中国大学MOOC](http://icourse163.org)
 
@@ -34,13 +36,13 @@ bye-flash-hello-html5 | 再见flash 你好html5
 
   提示：使用Mac+safari的用户可以直接使用HTML5播放。
 
-- [腾讯视频](https://v.qq.com)
+- ~~[腾讯视频](https://v.qq.com)~~
 
   提示：大部分浏览器可以直接使用HTML5播放。
 
-- [QQ音乐MV](https://y.qq.com/portal/mv_lib.html)
+- ~~[QQ音乐MV](https://y.qq.com/portal/mv_lib.html)~~
 
-  提示：Chrome52+可以直接使用HTML5播放。
+  提示：新版Firefox、Chrome可以直接使用HTML5播放。
 
 - [搜狐视频](https://tv.sohu.com/)
 
