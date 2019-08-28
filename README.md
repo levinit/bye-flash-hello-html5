@@ -1,6 +1,7 @@
 bye-flash-hello-html5 | 再见flash 你好html5
 
 ---
+主流视频网站均以“归化”，本无聊项目封存归档。
 
 # 介绍
 
